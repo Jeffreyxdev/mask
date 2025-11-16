@@ -144,7 +144,8 @@ const ChatArea = ({ spaceId, onBack }: ChatAreaProps) => {
       </div>
 
       {/* Input Area */}
-  <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-slate-900/95 to-transparent backdrop-blur-xl border-t border-slate-800/50">
+{/* Input Area */}
+<div className="fixed bottom-0 left-0 w-full p-4 bg-gradient-to-t from-slate-900/95 to-transparent backdrop-blur-xl border-t border-slate-800/50 z-20">
   <div className="flex items-end gap-2">
     <textarea
       value={newPost}
@@ -164,6 +165,7 @@ const ChatArea = ({ spaceId, onBack }: ChatAreaProps) => {
     </button>
   </div>
 </div>
+
 
       {/* Toast */}
       {toast && (
