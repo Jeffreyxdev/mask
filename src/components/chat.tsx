@@ -244,7 +244,7 @@ const ReplyInput = ({ postId, onAddReply }: ReplyInputProps) => {
         onChange={e => setReply(e.target.value)}
         onKeyDown={handleKeyPress}
         placeholder="Write a reply..."
-        className="flex-1 px-2 py-1 rounded-2xl bg-slate-800 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500/50 border border-slate-700 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-slate-900"
+        className="flex-1 px-1 py-1 rounded-2xl bg-slate-800 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500/50 border border-slate-700 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-slate-900"
       />
       <button
         onClick={handleSendReply}
