@@ -137,7 +137,7 @@ const ChatArea = ({ spaceId, onBack }: ChatAreaProps) => {
       </div>
 
       {/* Posts Feed */}
-      <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4">
+      <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4 pb-30">
         {posts.map(post => (
           <PostCard key={post.id} post={post} onLike={handleLike} onAddReply={handleAddReply} />
         ))}
