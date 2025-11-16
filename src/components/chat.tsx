@@ -238,13 +238,13 @@ const ReplyInput = ({ postId, onAddReply }: ReplyInputProps) => {
   };
 
   return (
-    <div className="flex items-center gap-2 mt-2">
+    <div className="flex items-center gap-2 mt-2 P-2">
       <input
         value={reply}
         onChange={e => setReply(e.target.value)}
         onKeyDown={handleKeyPress}
         placeholder="Write a reply..."
-        className="flex-1 px-3 py-2 rounded-full bg-slate-800 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500/50 border border-slate-700 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-slate-900"
+        className="flex-1 px-2 py-1 rounded-2xl bg-slate-800 text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500/50 border border-slate-700 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-slate-900"
       />
       <button
         onClick={handleSendReply}
