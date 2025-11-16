@@ -8,7 +8,7 @@ interface Props {
 const LandingPage = ({ onEnterSpace }: Props) => {
   const [joinCode, setJoinCode] = useState("");
   const [loading, setLoading] = useState({ create: false, join: false });
-  const [copiedLink, setCopiedLink] = useState(false);
+
 
   const handleCreate = async () => {
     try {
@@ -38,16 +38,6 @@ const LandingPage = ({ onEnterSpace }: Props) => {
     }
   };
 
-  const handleShareLink = () => {
-    if (!joinCode.trim()) return alert("Create or enter a space first!");
-    const link = `${window.location.origin}?space=${joinCode.toUpperCase()}`;
-    navigator.clipboard.writeText(link)
-      .then(() => {
-        setCopiedLink(true);
-        setTimeout(() => setCopiedLink(false), 2000);
-      })
-      .catch(() => alert("Failed to copy link"));
-  };
 
   return (
     <div className="h-screen flex items-center justify-center bg-linear-to-br from-slate-900 to-black/90">
@@ -82,13 +72,7 @@ const LandingPage = ({ onEnterSpace }: Props) => {
           </button>
         </div>
 
-        {/* Share Link Button */}
-        <button
-          onClick={handleShareLink}
-          className="w-full mt-2 bg-slate-600/80 py-2 rounded-lg text-white font-medium hover:bg-slate-600/100 transition-colors flex items-center justify-center"
-        >
-          {copiedLink ? "Link Copied!" : "Copy Shareable Link"}
-        </button>
+     
       </div>
     </div>
   );
